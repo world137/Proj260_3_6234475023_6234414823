@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Bus Olympic</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register">New User? Register here</string>
+    <string name="login_error_message">Username or Password is incorrect.</string>
+    <string name="password_confirm_title">Confirm Password</string>
+    <string name="register_error_message">Register failed, Try again!</string>
+    <string name="register_password_error">Password does not match</string>
+    <string name="register_success">Register Successful</string>
+    <string name="signIn_success">Sign in Successful</string>
+    <string name="password_is_to_short">Password must be at lease 8 characters</string>
+    <string name="enter_email">Please enter your email</string>
+    <string name="enter_username">Please enter your username</string>
+    <string name="enter_password">Please enter your password</string>
+    <string name="enter_password2">Please confirm password</string>
+    <string name="enter_idCard">Please enter your card number</string>
+</resources>

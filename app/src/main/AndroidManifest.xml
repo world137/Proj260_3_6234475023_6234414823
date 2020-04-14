@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.busolympic">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".BusEvents.SecondMainActivity"></activity>
+        <activity android:name=".BusEvents.DetailOfSeats" />
+        <activity android:name=".BusEvents.BusTimeTableHome" />
+        <activity android:name=".SportEvent.DetailOfBus" />
+        <activity android:name=".ItemClickListener" />
+        <activity android:name=".Bookingfragment" />
+        <activity android:name=".SportEvent.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SportEvent.SportsEventHome" />
+    </application>
+
+</manifest>
