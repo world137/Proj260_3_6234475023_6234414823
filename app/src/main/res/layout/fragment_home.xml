@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/LightCyan3"
     android:orientation="vertical">
 
 
@@ -16,6 +16,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="0dp"
         android:text="Your Journey to Olympics"
+        android:textColor="@color/Salmon2"
         android:textSize="26sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/event_list_recyclerview"

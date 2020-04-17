@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#D2FFF1"
     tools:context=".ItemClickListener">
 
     <ImageView
@@ -116,18 +117,29 @@
             app:layout_constraintTop_toBottomOf="@+id/TV_duration"
             app:layout_constraintVertical_bias="0.066" />
 
-        <Button
-            android:id="@+id/BTN_book"
-            android:layout_width="164dp"
-            android:layout_height="74dp"
-            android:text="BOOK"
-            android:textSize="26sp"
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="113dp"
+            android:layout_height="59dp"
+            android:src="@drawable/back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.89"
+            app:layout_constraintHorizontal_bias="0.157"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TV_time_travel"
-            app:layout_constraintVertical_bias="0.633" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.879" />
+
+        <ImageView
+            android:id="@+id/book"
+            android:layout_width="133dp"
+            android:layout_height="59dp"
+            android:src="@drawable/book"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.83"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.879" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

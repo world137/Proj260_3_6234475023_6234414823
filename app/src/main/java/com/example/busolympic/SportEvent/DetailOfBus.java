@@ -21,14 +21,13 @@ public class DetailOfBus extends AppCompatActivity {
     public static final String EXTRA_SPORTS_EVENT="extra sport events";
 
     private TextView header,venue,date,startTime,duration,travel;
-    private Button book;
-    private ImageView image;
+    private ImageView image , back ,book;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_of_bus);
-
+        back=findViewById(R.id.back);
         header=findViewById(R.id.TV_event_header);
         venue=findViewById(R.id.TV_place);
         date=findViewById(R.id.TV_date);
@@ -36,7 +35,7 @@ public class DetailOfBus extends AppCompatActivity {
         duration=findViewById(R.id.TV_duration);
         travel=findViewById(R.id.TV_time_travel);
         image=findViewById(R.id.ImV_view_demo);
-        book=findViewById(R.id.BTN_book);
+        book=findViewById(R.id.book);
 
         SportsDetail sportsDetail=getIntent().getParcelableExtra(EXTRA_SPORTS_EVENT);
 
@@ -47,6 +46,12 @@ public class DetailOfBus extends AppCompatActivity {
         startTime.setText("Start:"+sportsDetail.getEventStartTime());
         duration.setText("Duration: "+sportsDetail.getEventDuration());
         travel.setText("Travel by bus: "+sportsDetail.getEventBusTravelTime());
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
