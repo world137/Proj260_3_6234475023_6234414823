@@ -22,6 +22,7 @@
             android:layout_margin="2dp"
 
             android:text="gender"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,9 +39,10 @@
             android:src="@drawable/olympic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.014"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.493" />
 
         <TextView
             android:id="@+id/TV_bus_type"
@@ -48,6 +50,7 @@
             android:layout_height="48dp"
             android:layout_margin="2dp"
             android:text="event name"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,6 +66,7 @@
             android:layout_margin="2dp"
             android:paddingLeft="0dp"
             android:text="event detail"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

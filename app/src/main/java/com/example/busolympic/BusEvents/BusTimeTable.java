@@ -14,12 +14,12 @@ import com.example.busolympic.R;
 
 import java.util.ArrayList;
 
-public class BusTimeTableAdapter extends RecyclerView.Adapter<BusTimeTableAdapter.MyViewHolder> {
+public class BusTimeTable extends RecyclerView.Adapter<BusTimeTable.MyViewHolder> {
 
-    private ArrayList<BusTimeTableDetail> mArrayLst;
+    private ArrayList<BusDetail> mArrayLst;
     private Context context;
 
-    public BusTimeTableAdapter(ArrayList<BusTimeTableDetail> mArrayLst, Context context) {
+    public BusTimeTable(ArrayList<BusDetail> mArrayLst, Context context) {
         this.mArrayLst = mArrayLst;
         this.context = context;
     }

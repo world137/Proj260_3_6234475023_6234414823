@@ -3,7 +3,7 @@ package com.example.busolympic.BusEvents;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class BusTimeTableDetail implements Parcelable {
+public class BusDetail implements Parcelable {
 
     private String busType;
     private String eventDestination;
@@ -13,7 +13,7 @@ public class BusTimeTableDetail implements Parcelable {
     private String seatColumns;
     private String costPerSeat;
 
-    public BusTimeTableDetail(String busType, String eventDestination, String busDeparture, String busTravelTime, String seatRows, String seatColumns, String costPerSeat) {
+    public BusDetail(String busType, String eventDestination, String busDeparture, String busTravelTime, String seatRows, String seatColumns, String costPerSeat) {
         this.busType = busType;
         this.eventDestination = eventDestination;
         this.busDeparture = busDeparture;
@@ -79,11 +79,11 @@ public class BusTimeTableDetail implements Parcelable {
         this.costPerSeat = costPerSeat;
     }
 
-    public static Creator<BusTimeTableDetail> getCREATOR() {
+    public static Creator<BusDetail> getCREATOR() {
         return CREATOR;
     }
 
-    protected BusTimeTableDetail(Parcel in) {
+    protected BusDetail(Parcel in) {
         busType = in.readString();
         eventDestination = in.readString();
         busDeparture = in.readString();
@@ -93,15 +93,15 @@ public class BusTimeTableDetail implements Parcelable {
         costPerSeat = in.readString();
     }
 
-    public static final Creator<BusTimeTableDetail> CREATOR = new Creator<BusTimeTableDetail>() {
+    public static final Creator<BusDetail> CREATOR = new Creator<BusDetail>() {
         @Override
-        public BusTimeTableDetail createFromParcel(Parcel in) {
-            return new BusTimeTableDetail(in);
+        public BusDetail createFromParcel(Parcel in) {
+            return new BusDetail(in);
         }
 
         @Override
-        public BusTimeTableDetail[] newArray(int size) {
-            return new BusTimeTableDetail[size];
+        public BusDetail[] newArray(int size) {
+            return new BusDetail[size];
         }
     };
 

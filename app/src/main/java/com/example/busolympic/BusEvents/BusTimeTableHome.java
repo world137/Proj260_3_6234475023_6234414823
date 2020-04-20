@@ -19,8 +19,8 @@ import java.util.ArrayList;
 public class BusTimeTableHome extends Fragment {
 
     private String data = "";
-    private BusTimeTableAdapter busTimeTableAdapter;
-    private ArrayList<BusTimeTableDetail> busTimeTableDetailsArrLst;
+    private BusTimeTable busTimeTableAdapter;
+    private ArrayList<BusDetail> busTimeTableDetailsArrLst;
     private RecyclerView recyclerView;
 
     @Nullable
@@ -28,7 +28,7 @@ public class BusTimeTableHome extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_bus_time_table, container, false);
         recyclerView = v.findViewById(R.id.bus_list_recyclerview);
-        busTimeTableAdapter = new BusTimeTableAdapter(busTimeTableDetailsArrLst, getContext());
+        busTimeTableAdapter = new BusTimeTable(busTimeTableDetailsArrLst, getContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(busTimeTableAdapter);
         return v;
@@ -39,8 +39,8 @@ public class BusTimeTableHome extends Fragment {
         super.onCreate(savedInstanceState);
 
         busTimeTableDetailsArrLst = new ArrayList<>();
-        busTimeTableDetailsArrLst.add(new BusTimeTableDetail("Type A", "Tokyo stadium", "12.30", "30", "5", "4", "10000"));
-        busTimeTableDetailsArrLst.add(new BusTimeTableDetail("Type B", "Tokyo stadium", "12.30", "30", "5", "4", "10000"));
+        busTimeTableDetailsArrLst.add(new BusDetail("Type A", "Tokyo stadium", "12.30", "30", "5", "4", "10000"));
+        busTimeTableDetailsArrLst.add(new BusDetail("Type B", "Tokyo stadium", "12.30", "30", "5", "4", "10000"));
 
     }
 }

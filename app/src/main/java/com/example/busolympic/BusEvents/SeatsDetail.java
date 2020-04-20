@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.busolympic.R;
 
-public class DetailOfSeats extends AppCompatActivity {
+public class SeatsDetail extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
