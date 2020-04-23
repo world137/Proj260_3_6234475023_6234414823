@@ -1,5 +1,10 @@
 package User;
-
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -27,6 +32,8 @@ public class Regis extends Fragment {
     private EditText mCardNumber;
     private ImageView mBack;
     private Context mContext;
+    private String str = null;
+    private String old = "" ;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -83,6 +90,7 @@ public class Regis extends Fragment {
         String confirmPassword = mPassword2.getText().toString();
         String email = mEmail.getText().toString();
         String cardNumber = mCardNumber.getText().toString();
+
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         if(username.length() == 0) {
             String message = getString(R.string.enter_username);

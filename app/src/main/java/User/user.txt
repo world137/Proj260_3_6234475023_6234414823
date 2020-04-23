@@ -1,2 +1,0 @@
-//            username    password    cardNumber
-Account 1 :
