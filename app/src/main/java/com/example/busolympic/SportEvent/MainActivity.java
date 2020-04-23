@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView bnv = findViewById(R.id.bottom_menu_bar_2);
+        BottomNavigationView bnv = findViewById(R.id.bottom_menu_bar);
         bnv.setOnNavigationItemSelectedListener(navListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_2,new SportsEventHome()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new SportsEventHome()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener= new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     selectedFragment = new Profilefragment();
                     break;
             }
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_2,selectedFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
             return true;
         }
     };

@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <FrameLayout
-            android:id="@+id/fragment_container_2"
+            android:id="@+id/fragment_container"
             android:layout_width="0dp"
             android:layout_height="754dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -25,7 +25,7 @@
         </FrameLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_menu_bar_2"
+            android:id="@+id/bottom_menu_bar"
             android:layout_width="0dp"
             android:layout_height="77dp"
             android:background="?android:attr/windowBackground"
@@ -34,7 +34,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/fragment_container_2"
+            app:layout_constraintTop_toTopOf="@+id/fragment_container"
             app:layout_constraintVertical_bias="1.0"
             app:menu="@menu/bottom_navigation" />
 

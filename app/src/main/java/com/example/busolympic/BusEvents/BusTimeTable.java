@@ -1,5 +1,6 @@
 package com.example.busolympic.BusEvents;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,6 +66,7 @@ public class BusTimeTable extends RecyclerView.Adapter<BusTimeTable.MyViewHolder
         @Override
         public void onClick(View v) {
             this.itemClickListener.onItemClickListener(v, getLayoutPosition());
+
         }
         public void setItemClickListener(ItemClickListener ic){
             this.itemClickListener=ic;

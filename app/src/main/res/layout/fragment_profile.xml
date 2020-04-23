@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/PLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E3FFD9"
@@ -21,7 +22,7 @@
             android:layout_height="wrap_content"
             android:hint="username"
             android:inputType="textPersonName"
-            android:textColor="#FFFFFF" />
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -35,7 +36,7 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColor="#FFFFFF" />
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -45,13 +46,6 @@
         android:layout_gravity="center"
         android:layout_margin="30dp"
         app:srcCompat="@drawable/signin" />
-
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="139dp"
-        android:layout_height="42dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/back" />
 
     <TextView
         android:id="@+id/register"
