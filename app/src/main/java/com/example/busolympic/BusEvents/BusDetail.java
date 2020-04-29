@@ -13,6 +13,8 @@ public class BusDetail implements Parcelable {
     private String seatColumns;
     private String costPerSeat;
 
+
+
     public BusDetail(String busType, String eventDestination, String busDeparture, String busTravelTime, String seatRows, String seatColumns, String costPerSeat) {
         this.busType = busType;
         this.eventDestination = eventDestination;

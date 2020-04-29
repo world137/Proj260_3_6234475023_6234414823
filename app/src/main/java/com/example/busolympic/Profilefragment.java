@@ -9,6 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
@@ -24,18 +28,18 @@ import com.example.busolympic.profile.PRegister;
 import com.example.busolympic.profile.Profile;
 
 public class Profilefragment extends Fragment {
-    private ArrayList<String[]> events =new ArrayList<>();
+    private ArrayList<String[]> events = new ArrayList<>();
     private String line;
     private String[] lineArr;
     private RecyclerView recyclerView;
-    private String userID ;
-    private String password;
+    private String userID  ;
+    private String password  ;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        final View view = inflater.inflate(R.layout.fragment_profile,container,false);
+        final View view = inflater.inflate(R.layout.fragment_profile, container, false);
         TextView register = view.findViewById(R.id.register);
         ImageView signIn = view.findViewById(R.id.signIn);
         final EditText user = view.findViewById(R.id.username);
@@ -54,10 +58,11 @@ public class Profilefragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                userID= user.getText().toString();
+                userID = user.getText().toString();
                 password = pass.getText().toString();
 
-                if (CheckLogin.checkLogin(userID, password, getContext())) {
+
+                if (CheckLogin.checkLogin(userID, password, getContext()) || CheckLogin.checkLogin2(userID,password,getContext())) {
                     Profile newProfile = new Profile(userID, password);
 
                     Method.saveProfile(getContext(), newProfile);
@@ -76,6 +81,7 @@ public class Profilefragment extends Fragment {
         return view;
 
     }
+}
 
 
 //    @Override
@@ -97,13 +103,15 @@ public class Profilefragment extends Fragment {
 //                        lineArr = line.split(",");
 //                        for (int i = 0; i < lineArr.length; i++) {
 //                            lineArr[i] = lineArr[i].trim();
-//                        }
-//                        events.add(lineArr);
-//                        if(userID.equals(events.get(i)[1])|| password.equals(events.get(i)[2])){
-//                            Fragment newFragment = new PInfo();
-//                            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-//                            transaction.replace(R.id.fragment_container, newFragment);
-//                            transaction.commit();
+//                            events.add(lineArr);
+//                            if (userID.equals(events.get(i)[1]) && password.equals(events.get(i)[2])) {
+//                                Fragment newFragment = new PInfo();
+//                                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//                                transaction.replace(R.id.fragment_container, newFragment);
+//                                transaction.commit();
+//                            } else {
+//                                Toast.makeText(getActivity(), "Incorrect Login Credential", Toast.LENGTH_SHORT).show();
+//                            }
 //                        }
 //                    }
 //                }
@@ -112,5 +120,5 @@ public class Profilefragment extends Fragment {
 //            }
 //        }
 //    }
-
-}
+//
+//}

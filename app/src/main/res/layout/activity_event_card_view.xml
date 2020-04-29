@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    android:backgroundTint="@color/SlateGray2"
+    android:backgroundTint="#FFFFFF"
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp">
 
@@ -22,7 +22,7 @@
             android:layout_margin="2dp"
 
             android:text="gender"
-            android:textColor="#FFFFFF"
+            android:textColor="#F9A825"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +50,7 @@
             android:layout_height="48dp"
             android:layout_margin="2dp"
             android:text="event name"
-            android:textColor="#FFFFFF"
+            android:textColor="#F9A825"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +66,7 @@
             android:layout_margin="2dp"
             android:paddingLeft="0dp"
             android:text="event detail"
-            android:textColor="#FFFFFF"
+            android:textColor="#F9A825"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
