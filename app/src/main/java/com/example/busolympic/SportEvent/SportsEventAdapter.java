@@ -47,8 +47,8 @@ public class SportsEventAdapter extends RecyclerView.Adapter<SportsEventAdapter.
             @Override
             public void onItemClickListener(View v, int position) {
 
-                Intent intent = new Intent(context, DetailOfBus.class);
-                intent.putExtra(DetailOfBus.EXTRA_SPORTS_EVENT, mArrayList.get(position));
+                Intent intent = new Intent(context, DetailOfBusFragment.class);
+                intent.putExtra(DetailOfBusFragment.EXTRA_SPORTS_EVENT, mArrayList.get(position));
                 context.startActivity(intent);
 
             }
@@ -74,6 +74,7 @@ public class SportsEventAdapter extends RecyclerView.Adapter<SportsEventAdapter.
             sportName=itemView.findViewById(R.id.TV_bus_type);
             eventType=itemView.findViewById(R.id.TV_amount_of_seat);
             athleteGender=itemView.findViewById(R.id.TV_bus_departure);
+
 
             itemView.setOnClickListener(this);
         }

@@ -13,7 +13,7 @@
         <activity android:name=".BusEvents.SecondMainActivity"></activity>
         <activity android:name=".BusEvents.SeatsDetail" />
         <activity android:name=".BusEvents.BusTimeTableHome" />
-        <activity android:name=".SportEvent.DetailOfBus" />
+        <activity android:name=".SportEvent.DetailOfBusFragment" />
         <activity android:name=".ItemClickListener" />
         <activity android:name=".Bookingfragment" />
         <activity android:name=".SportEvent.MainActivity">

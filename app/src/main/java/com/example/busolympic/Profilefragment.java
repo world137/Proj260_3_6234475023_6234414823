@@ -8,11 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import com.example.busolympic.profile.FragmentAssist;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
@@ -21,7 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.busolympic.profile.CheckLogin;
+
 import com.example.busolympic.profile.Method;
 import com.example.busolympic.profile.PInfo;
 import com.example.busolympic.profile.PRegister;
@@ -62,9 +58,8 @@ public class Profilefragment extends Fragment {
                 password = pass.getText().toString();
 
 
-                if (CheckLogin.checkLogin(userID, password, getContext()) || CheckLogin.checkLogin2(userID,password,getContext())) {
+                if (FragmentAssist.authenticate(userID, password, getContext())) {
                     Profile newProfile = new Profile(userID, password);
-
                     Method.saveProfile(getContext(), newProfile);
                     Method.saveLoginStatus(getContext(), true);
                     Toast.makeText(getActivity(),"Login Successful", Toast.LENGTH_SHORT).show();
@@ -76,50 +71,9 @@ public class Profilefragment extends Fragment {
                 else {
                     Toast.makeText(getActivity(),"Incorrect Login Credential", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
         return view;
 
     }
 }
-
-
-//    @Override
-//    public void onCreate(@Nullable Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//
-//        InputStream inputStream = this.getResources().openRawResource(R.raw.input);
-//
-//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-//
-//        boolean run = true;
-//        while (run) {
-//            try {
-//                if (!((line = bufferedReader.readLine()) != null)) {
-//                    break;
-//                } else {
-//                    if (line.contains("Account")) {
-//                        line = line.replace(":", ",");
-//                        lineArr = line.split(",");
-//                        for (int i = 0; i < lineArr.length; i++) {
-//                            lineArr[i] = lineArr[i].trim();
-//                            events.add(lineArr);
-//                            if (userID.equals(events.get(i)[1]) && password.equals(events.get(i)[2])) {
-//                                Fragment newFragment = new PInfo();
-//                                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-//                                transaction.replace(R.id.fragment_container, newFragment);
-//                                transaction.commit();
-//                            } else {
-//                                Toast.makeText(getActivity(), "Incorrect Login Credential", Toast.LENGTH_SHORT).show();
-//                            }
-//                        }
-//                    }
-//                }
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//    }
-//
-//}

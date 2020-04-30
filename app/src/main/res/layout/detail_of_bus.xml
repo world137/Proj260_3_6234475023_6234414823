@@ -9,7 +9,6 @@
     tools:context=".ItemClickListener">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_marginTop="65dp"
         android:layout_width="match_parent"
         android:layout_height="525dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,32 +40,35 @@
             android:layout_width="219dp"
             android:layout_height="51dp"
             android:text="Swimming"
+            android:textColor="#FFFFFF"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.567"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.058" />
+            app:layout_constraintVertical_bias="0.24" />
 
         <TextView
             android:id="@+id/TV_place"
             android:layout_width="265dp"
             android:layout_height="29dp"
             android:text="Venue"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.746"
+            app:layout_constraintHorizontal_bias="0.89"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TV_event_header"
-            app:layout_constraintVertical_bias="0.081" />
+            app:layout_constraintVertical_bias="0.085" />
 
         <TextView
             android:id="@+id/TV_date"
             android:layout_width="215dp"
             android:layout_height="29dp"
             android:text="date"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -80,6 +82,7 @@
             android:layout_width="215dp"
             android:layout_height="29dp"
             android:text="start"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -93,6 +96,7 @@
             android:layout_width="215dp"
             android:layout_height="29dp"
             android:text="duration"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -106,6 +110,7 @@
             android:layout_width="215dp"
             android:layout_height="29dp"
             android:text="travel"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -137,6 +142,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.879" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="107dp"
+            android:layout_height="109dp"
+            android:src="@drawable/olympic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
