@@ -6,16 +6,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.fragment.app.Fragment;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.busolympic.ItemClickListener;
 import com.example.busolympic.R;
+import com.example.busolympic.SportEvent.BusASeats;
 
 import java.util.ArrayList;
 
-public class BusTimeTable extends RecyclerView.Adapter<BusTimeTable.MyViewHolder> {
+public class BusTimeTable extends RecyclerView.Adapter<BusTimeTable.MyViewHolder>{
 
     private ArrayList<BusDetail> mArrayLst;
     private Context context;
@@ -59,6 +63,7 @@ public class BusTimeTable extends RecyclerView.Adapter<BusTimeTable.MyViewHolder
             eventduration=itemView.findViewById(R.id.TV_duration);
             busType=itemView.findViewById(R.id.TV_bus_type);
             amountOfSeats=itemView.findViewById(R.id.TV_amount_of_seats);
+            amountOfSeats.setText("20");
 
             itemView.setOnClickListener(this);
         }
@@ -66,6 +71,10 @@ public class BusTimeTable extends RecyclerView.Adapter<BusTimeTable.MyViewHolder
         @Override
         public void onClick(View v) {
             this.itemClickListener.onItemClickListener(v, getLayoutPosition());
+//            Fragment newFragment = new BusASeats();
+//            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//            transaction.replace(R.id.fragment_container, newFragment);
+//            transaction.commit();
 
         }
         public void setItemClickListener(ItemClickListener ic){
